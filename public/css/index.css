@@ -1,0 +1,73 @@
+* {
+    --colorBack: rgb(0, 0, 0);
+    --colorWhite: #ececeb;
+    --colorOrange: #e2a82f;
+    --colorGrey: #8b8986;
+    --colorDarkerGrey: #2d3439;
+
+    --spacing: min(3vh, 3vw);
+}
+
+@font-face {
+    font-family: audioWide;
+    src: url('Audiowide-Regular.ttf');
+}
+
+figure { margin: 0px; }
+button { outline: none; }
+a { text-decoration: none; }
+
+body {
+    margin: 0px;
+    background-color: var(--colorBack);
+    color: var(--colorWhite);
+    font-family: audioWide;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    --headerHeight: 10vh;
+
+    height: var(--headerHeight);
+    padding: var(--spacing);
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+header figure {
+    height: var(--headerHeight);
+    aspect-ratio: 1/1;
+}
+
+header figure img {
+    height: var(--headerHeight);
+    object-fit: cover;
+}
+
+#header_buttons {
+    margin-left: auto;
+    margin-right: var(--spacing);
+
+    display: flex;
+    align-items: center;
+    gap: calc(2 * var(--spacing));
+}
+
+#header_buttons div { padding: 5px; }
+
+.text_button { transition: 0.5s; }
+.text_button:hover {
+    cursor: pointer;
+    color: var(--colorDarkerGrey);
+    background-color: var(--colorGrey);
+    border-radius: 10px;
+}
+
+main section {
+    padding: var(--spacing)
+}

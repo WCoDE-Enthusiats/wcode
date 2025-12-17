@@ -1,2 +1,7 @@
 .DS_Store
 node_modules
+.env
+mongodb.js
+
+# Local Netlify folder
+.netlify
