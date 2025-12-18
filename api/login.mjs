@@ -30,7 +30,7 @@ export const handler = async (event, context) => {
             }
         } else {
             return {
-                statusCode: 500,
+                statusCode: 200,
                 body: JSON.stringify({
                     message: "user not found",
                 }),
