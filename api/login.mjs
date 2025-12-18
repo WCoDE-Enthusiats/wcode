@@ -26,6 +26,7 @@ export const handler = async (event, context) => {
                 statusCode: 200,
                 body: JSON.stringify({
                     message: "Yep that guy exists in our database!",
+                    user_info: user[0]
                 }),
             }
         } else {
