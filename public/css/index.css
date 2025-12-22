@@ -5,6 +5,10 @@
     --colorGrey: #8b8986;
     --colorDarkerGrey: #2d3439;
 
+    --python: #00bf63;
+    --cplusplus: #0cc0df;
+    --javascript: #ffde59;
+
     --spacing: min(3vh, 3vw);
     
     --darkshadow: rgb(180, 180, 180);
@@ -35,6 +39,7 @@ body {
     background-color: var(--colorBack);
     color: var(--colorWhite);
     font-family: audioWide;
+    cursor: default;
 
     display: flex;
     flex-direction: column;

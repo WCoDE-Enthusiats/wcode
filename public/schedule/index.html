@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WCoDE</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="schedule/index.css">
+  </head>
+  <body data-role='student'>
+    <header>
+      <figure><img src="images/icon.png" alt="WCoDE icon"></figure>
+
+      <div id="header_buttons">
+        <div class="text_button">Home</div>
+        <div class="text_button">Schedule</div>
+        <div class="text_button">Login</div>
+      </div>
+    </header>
+    
+    <main>
+      <section>
+        <nav> <!-- header tags are affected -->
+          <div id="month">Upcoming Classes - December</div>
+
+          <div id="subjects">
+            <div><span>Python</span></div>
+            <div><span>Modeling</span></div>
+            <div><span>Javascript</span></div>
+          </div>
+        </nav>
+
+        <div id="days">
+          <div class="dayContainer"><span>Sun</span></div>
+          <div class="dayContainer"><span>Mon</span></div>
+          <div class="dayContainer"><span>Tue</span></div>
+          <div class="dayContainer"><span>Wed</span></div>
+          <div class="dayContainer"><span>Thu</span></div>
+          <div class="dayContainer"><span>Fri</span></div>
+          <div class="dayContainer"><span>Sat</span></div>
+        </div>
+      </section>
+
+      <aside>
+        <nav data-subject="nothing" id="eventHeader"><span>Select an Event</span> <button class="teacher">F</button></nav>
+
+        <article>
+          <div>Loc: none</div>
+          <div>Time: none</div>
+          <div>Details: none</div>
+        </article>
+      </aside>
+    </main>
+
+    <!-- <script type="module">
+      console.log("ready");
+
+      document.getElementById("fetch-btn").onclick = async () => {
+          console.log("fetching")
+
+          const response = await fetch('/.netlify/functions/login')
+            .then(response => response.json())
+
+            console.log(response)
+
+          document.getElementById('response-output').innerText = response.message;
+      }
+    </script> -->
+
+    <script src="schedule/days.js"></script>
+  </body>
+</html>
