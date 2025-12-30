@@ -4,8 +4,8 @@ main {
 }
 
 section {
-    flex: 1;
-
+    width: min(60vw, 90vh);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,11 +34,11 @@ input {
     
     text-align: center;
     color: var(--colorWhite);
-
+    
     border-radius: 10px;
     border: 1px solid var(--colorBack);
     outline: none;
-
+    
     transition: 1s;
 }
 
@@ -54,7 +54,7 @@ input:focus {
 }
 
 main figure {
-    width: min(60vw, 90vh);
+    flex: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%), url('../images/micheal.jpg');
     background-position: left bottom;
     background-size: cover;
