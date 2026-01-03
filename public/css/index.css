@@ -33,7 +33,7 @@ a { text-decoration: none; }
 body {
     margin: 0px;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     
     background-color: var(--colorBack);
@@ -48,6 +48,10 @@ body {
 header {
     --headerHeight: 10vh;
 
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: var(--colorBack);
     height: var(--headerHeight);
     padding: var(--spacing);
     padding-top: 0px;
