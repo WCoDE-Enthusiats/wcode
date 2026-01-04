@@ -30,6 +30,15 @@ a { text-decoration: none; }
     box-shadow: 0px 4px 6px var(--softshadow);
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, and Opera */
+}
+
 body {
     margin: 0px;
     height: 100vh;
