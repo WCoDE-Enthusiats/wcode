@@ -1,17 +1,20 @@
 main {
     flex: 1;
-    display: flex;
     width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
 }
 
 section {
     width: 100%;
+    overflow: hidden;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing);
 }
 
 section h1 {
@@ -62,24 +65,29 @@ main figure {
 }
 
 #glitch_container {
-    position: relative;
-    height: 50%;
-    aspect-ratio: 1/1;
-    border-radius: var(--spacing);
-    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: visible;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-#glitch_content { 
+#glitch_content {
     width: min-content;
 }
 
 #glitch_content h1 {
     width: min-content;
+    margin-bottom: 1rem;
 }
 
 #glitch_text {
-    position: absolute;
+    position: fixed;
     top: -5px;
     left: -5px;
     height: 120%;
@@ -91,7 +99,7 @@ main figure {
     /* yes i copy pasted */
   color: transparent;
   background-image: radial-gradient(
-    circle 250px at var(--x, 50%) var(--y, 50%), 
+    circle var(--size) at var(--x, 50%) var(--y, 50%), 
     rgba(46, 137, 255, 0.6) 0%, 
     rgba(21, 230, 200, 0.5) 40%, 
     rgba(255, 255, 255, 0.2) 70%, 
@@ -99,4 +107,22 @@ main figure {
   );
   -webkit-background-clip: text;
   background-clip: text;
+    pointer-events: none;
+}
+
+#back_h1 {
+    position: fixed;
+    z-index: 0;
+    color: var(--colorDarkerGrey);
+    left: 10vw;
+    top: 0px;
+    font-size: min(50vh, 40vw);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    #back_h1 {
+        transform: rotate(90deg);
+    }
 }

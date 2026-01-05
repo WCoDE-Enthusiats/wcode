@@ -31,10 +31,12 @@ async function login () {
 
 const glitch_text = document.getElementById("glitch_text");
 const the_alphabet = "QWERTYUIOPASGHJKLZXCBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*()-=[]\;',._+{|:<>";
-document.getElementById("glitch_container").onmousemove = (e) => {
+
+const glitch_container = document.getElementById("glitch_container");
+glitch_container.onmousemove = (e) => {
     let new_text = ""
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10000; i++) {
         new_text += the_alphabet[Math.floor(Math.random() * the_alphabet.length)] + " ";
     }
 
@@ -47,3 +49,19 @@ document.getElementById("glitch_container").onmousemove = (e) => {
     glitch_text.style.setProperty('--x', `${x_pos}px`);
     glitch_text.style.setProperty('--y', `${y_pos}px`);
 }
+
+let current_size = 0;
+let target_size = 0;
+glitch_container.onmouseenter = () => { target_size = 250; };
+glitch_container.onmouseleave = () => { target_size = 0; };
+
+update_size();
+function update_size () {
+    current_size += (target_size - current_size) / 2;
+    glitch_text.style.setProperty('--size', `${current_size}px`);
+    
+    requestAnimationFrame(update_size);
+}
+const back_h1 = document.getElementById("back_h1");
+document.getElementById("id_input").onfocus = () => { back_h1.style.opacity = "0.3"; };
+document.getElementById("id_input").onblur = () => { back_h1.style.opacity = "0"; };
