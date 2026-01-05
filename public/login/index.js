@@ -28,3 +28,22 @@ async function login () {
 
     window.location.href = '../dashboard'
 }
+
+const glitch_text = document.getElementById("glitch_text");
+const the_alphabet = "QWERTYUIOPASGHJKLZXCBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*()-=[]\;',._+{|:<>";
+document.getElementById("glitch_container").onmousemove = (e) => {
+    let new_text = ""
+
+    for (let i = 0; i < 1000; i++) {
+        new_text += the_alphabet[Math.floor(Math.random() * the_alphabet.length)] + " ";
+    }
+
+    glitch_text.innerText = new_text;
+
+    const bounding_rect = glitch_text.getBoundingClientRect();
+    const x_pos = e.clientX - bounding_rect.left;
+    const y_pos = e.clientY - bounding_rect.top;
+
+    glitch_text.style.setProperty('--x', `${x_pos}px`);
+    glitch_text.style.setProperty('--y', `${y_pos}px`);
+}

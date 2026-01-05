@@ -1,11 +1,12 @@
 main {
     flex: 1;
     display: flex;
+    width: 100%;
 }
 
 section {
-    width: min(60vw, 90vh);
-    
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,4 +59,44 @@ main figure {
     background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%), url('../images/micheal.jpg');
     background-position: left bottom;
     background-size: cover;
+}
+
+#glitch_container {
+    position: relative;
+    height: 50%;
+    aspect-ratio: 1/1;
+    border-radius: var(--spacing);
+    overflow: hidden;
+}
+
+
+#glitch_content { 
+    width: min-content;
+}
+
+#glitch_content h1 {
+    width: min-content;
+}
+
+#glitch_text {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 120%;
+    width: 120%;
+    font-family: monospace;
+    
+    cursor: default;
+
+    /* yes i copy pasted */
+  color: transparent;
+  background-image: radial-gradient(
+    circle 250px at var(--x, 50%) var(--y, 50%), 
+    rgba(46, 137, 255, 0.6) 0%, 
+    rgba(21, 230, 200, 0.5) 40%, 
+    rgba(255, 255, 255, 0.2) 70%, 
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
 }

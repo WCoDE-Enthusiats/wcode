@@ -124,3 +124,42 @@ section h2 { margin: 0; }
     font-size: min(4vh, 4vw);
     padding: 0px min(5vw, 5vh);
 }
+
+#language_section {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#programming_container {
+    height: max(5vh, 5vw);
+
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.programming_square {
+    height: 100%;
+    aspect-ratio: 1/1;
+    transform: translateY(0px);
+}
+
+#python_square { background-color: var(--python);}
+#cplusplus_square { background-color: var(--cplusplus);}
+#javascript_square { background-color: var(--javascript);}
+
+#language_description_container {
+    margin-top: 1rem;
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+}
+
+#language_description_container article {
+}
+
+#language_description_container h1 { font-size: min(10vw, 10vh); }
+#language_description_container p { font-size: 2rem;}
