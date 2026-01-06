@@ -1,6 +1,5 @@
 section {
     box-sizing: border-box;
-    height: 100vh;
     width: 100%;
     position: relative;
 }
@@ -126,6 +125,7 @@ section h2 { margin: 0; }
 }
 
 #language_section {
+    margin-top: calc(4 * var(--spacing));
     text-align: center;
 
     display: flex;
@@ -135,6 +135,7 @@ section h2 { margin: 0; }
 
 #programming_container {
     height: max(5vh, 5vw);
+    overflow: hidden;
 
     display: flex;
     align-items: end;
@@ -144,7 +145,8 @@ section h2 { margin: 0; }
 .programming_square {
     height: 100%;
     aspect-ratio: 1/1;
-    transform: translateY(0px);
+    transform: translateY(0%);
+    transition: 1s;
 }
 
 #python_square { background-color: var(--python);}
@@ -152,14 +154,70 @@ section h2 { margin: 0; }
 #javascript_square { background-color: var(--javascript);}
 
 #language_description_container {
+    position: relative;
     margin-top: 1rem;
-    overflow-x: scroll;
     display: flex;
     width: 100%;
+    max-width: 100%;
+    height: min-content;
+    overflow: hidden;
 }
 
 #language_description_container article {
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-shrink: 0;
+    transform: translateX(-0%);
+    transition: 1s;
 }
+#language_description_container p { padding: 0px 5vw; }
 
 #language_description_container h1 { font-size: min(10vw, 10vh); }
 #language_description_container p { font-size: 2rem;}
+
+#language_scroll_wrapper {
+    overflow-x: scroll;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#language_scroll_wrapper div {
+    height: 100%;
+    width: 100%;
+}
+
+#stat_section h3 {
+    text-align: right;
+    align-self: flex-end;
+    width: 80%;
+    font-weight: normal;
+}
+
+#stat_section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}
+
+#podium {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#podium h1 {
+    font-weight: lighter;
+    font-size: 5rem;
+}
+
+#podium p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#podium div { position: relative; }
+
+#podium div:nth-child(1) { top: 25px; }
+#podium div:nth-child(3) { top: 25px; }

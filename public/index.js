@@ -76,3 +76,45 @@ window.onscroll = () => {
 
     gallery_wrapper.scrollLeft = gallery_scroll;
 };
+
+
+const language_scroll_wrapper = document.getElementById("language_scroll_wrapper");
+const language_squares = document.getElementsByClassName("programming_square");
+const language_articles = document.getElementById("language_description_container").children;
+let current_language = 0; // 0 python, 1 cplusplus, 2 javascript
+update_language();
+language_scroll_wrapper.onscroll = () => {
+    const language_progres = 4 * language_scroll_wrapper.scrollLeft/language_scroll_wrapper.scrollWidth;
+    console.log(current_language);
+
+    if (language_progres >= 2) {
+        if (current_language != 2) {
+            current_language = 2;
+            update_language();
+        }
+    } else if (language_progres >= 1) {
+        if (current_language != 1) {
+            current_language = 1;
+            update_language();
+        }
+    } else if (language_progres >= 0) {
+        if (current_language != 0) {
+            current_language = 0;
+            update_language();
+        }
+    }
+}
+
+function update_language () {
+    for (let i = 0; i < 3; i++) {
+        if (i == current_language) {
+            language_squares[i].style.transform = "translateY(50%)";
+            language_articles[i].style.opacity = "1";
+        } else {
+            language_squares[i].style.transform = "translateY(0%)";
+            language_articles[i].style.opacity = "0";
+        }
+        
+        language_articles[i].style.transform = `translateX(-${i}00%)`
+    }
+}

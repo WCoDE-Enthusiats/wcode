@@ -50,18 +50,18 @@ glitch_container.onmousemove = (e) => {
     glitch_text.style.setProperty('--y', `${y_pos}px`);
 }
 
-let current_size = 0;
-let target_size = 0;
-glitch_container.onmouseenter = () => { target_size = 250; };
-glitch_container.onmouseleave = () => { target_size = 0; };
+// let current_size = 0;
+// let target_size = 0;
+// glitch_container.onmouseenter = () => { target_size = 250; };
+// glitch_container.onmouseleave = () => { target_size = 0; };
 
-update_size();
-function update_size () {
-    current_size += (target_size - current_size) / 2;
-    glitch_text.style.setProperty('--size', `${current_size}px`);
+// update_size();
+// function update_size () {
+//     current_size += (target_size - current_size) / 2;
+//     glitch_text.style.setProperty('--size', `${current_size}px`);
     
-    requestAnimationFrame(update_size);
-}
+//     requestAnimationFrame(update_size);
+// }
 const back_h1 = document.getElementById("back_h1");
 document.getElementById("id_input").onfocus = () => { back_h1.style.opacity = "0.3"; };
 document.getElementById("id_input").onblur = () => { back_h1.style.opacity = "0"; };
