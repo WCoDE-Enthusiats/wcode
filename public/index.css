@@ -42,6 +42,7 @@ section h2 { margin: 0; }
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10vw;
 
     text-shadow: 0px 2px 45px var(--darkshadow);
     text-shadow: 0px 4px 50px var(--softshadow);
