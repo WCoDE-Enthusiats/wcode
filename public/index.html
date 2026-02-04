@@ -14,8 +14,8 @@
 
       <div id="header_buttons">
         <div class="text_button">Home</div>
-        <div class="text_button">Schedule</div>
-        <div class="text_button">Login</div>
+        <div class="text_button" onclick="window.location.href = 'schedule'">Schedule</div>
+        <div class="text_button" onclick="window.location.href = 'login/index.html'">Login</div>
       </div>
     </header>
     
@@ -94,9 +94,9 @@
 
       <section id="language_section">
         <div id="programming_container">
-          <div class="programming_square" id="python_square"></div>
-          <div class="programming_square" id="cplusplus_square"></div>
-          <div class="programming_square" id="javascript_square"></div>
+          <div class="programming_square" id="python_square"><a href="#python_page"></a></div>
+          <div class="programming_square" id="cplusplus_square"><a href="#cplusplus_page"></a></div>
+          <div class="programming_square" id="javascript_square"><a href="#javascript_page"></a></div>
         </div>
 
         <div id="language_description_container">
@@ -121,7 +121,7 @@
           </article>
 
           <div id="language_scroll_wrapper"  class="hide-scrollbar">
-            <div style="width: 300vw;"></div>
+            <div style="width: 150vw;"></div>
           </div>
         </div>
       </section>

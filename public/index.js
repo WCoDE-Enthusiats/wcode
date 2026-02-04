@@ -84,16 +84,16 @@ const language_articles = document.getElementById("language_description_containe
 let current_language = 0; // 0 python, 1 cplusplus, 2 javascript
 update_language();
 language_scroll_wrapper.onscroll = () => {
-    const language_progres = 4 * language_scroll_wrapper.scrollLeft/language_scroll_wrapper.scrollWidth;
-    console.log(current_language);
+    const language_progres = 8 * language_scroll_wrapper.scrollLeft/language_scroll_wrapper.children[0].scrollWidth;
+    console.log(`${language_progres} from ${language_scroll_wrapper.scrollLeft} divided by ${language_scroll_wrapper.children[0].scrollWidth}`);
 
-    if (language_progres >= 2) {
-        if (current_language != 2) {
+    if (language_progres >= 2.5) {
+        if (current_language != 2.5) {
             current_language = 2;
             update_language();
         }
-    } else if (language_progres >= 1) {
-        if (current_language != 1) {
+    } else if (language_progres >= 0.5) {
+        if (current_language != 0.5) {
             current_language = 1;
             update_language();
         }
