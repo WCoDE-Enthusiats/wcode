@@ -19,7 +19,7 @@ section {
 
 section h1 {
     margin: 0px;
-    font-size: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3);
 }
 
 span {
@@ -32,6 +32,7 @@ span {
 }
 
 input {
+    margin: 0px auto;
     display: block;
     padding: 10px;
     background-color: var(--colorDarkerGrey);
