@@ -228,3 +228,8 @@ section h2 { margin: 0; }
 
 #podium div:nth-child(1) { top: 25px; }
 #podium div:nth-child(3) { top: 25px; }
+
+.trail {
+    background-image: url("trail.png");
+    background-size: contain;
+}
