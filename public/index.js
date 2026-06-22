@@ -123,7 +123,7 @@ const contributors = document.getElementsByClassName("contributors");
 
 for(let i = 0; i < contributors.length; i++){
     contributors[i].onclick = () => {
-        const project_id = contributors.getAttribute("data-projectId");
+        const project_id = contributors[i].getAttribute("data-projectId");
 
         localStorage.setItem("project_id", project_id);
         document.location.href = "contributors/";
