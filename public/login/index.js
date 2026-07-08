@@ -32,8 +32,14 @@ async function login () {
 const glitch_text = document.getElementById("glitch_text");
 const the_alphabet = "QWERTYUIOPASGHJKLZXCBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*()-=[]\;',._+{|:<>";
 
+const bounding_rect = glitch_text.getBoundingClientRect();
 const glitch_container = document.getElementById("glitch_container");
+let last_update_time = Date.now() - 1000;
 glitch_container.onmousemove = (e) => {
+    const last_update_delta = Date.now() - last_update_time;
+    if (last_update_delta < 1000/20) { return }
+    last_update_time = Date.now();
+
     let new_text = ""
 
     for (let i = 0; i < 10000; i++) {
@@ -42,7 +48,6 @@ glitch_container.onmousemove = (e) => {
 
     glitch_text.innerText = new_text;
 
-    const bounding_rect = glitch_text.getBoundingClientRect();
     const x_pos = e.clientX - bounding_rect.left;
     const y_pos = e.clientY - bounding_rect.top;
 
