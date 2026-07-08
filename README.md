@@ -1,4 +1,4 @@
-# WCODE | Wardaya Coding Done Enthusiats
+# WCODE | Wardaya Coding of Digital Enthusiats
 The homepage of SMA Wardaya's coding club!
 
 ## You can
