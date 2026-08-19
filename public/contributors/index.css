@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#header_buttons {
+    display:flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+header {
+    display:flex;
+    background-color: #2d3439;
+    height: 12vh;
+}
+
+.text_button {
+    color: #ffde59;
+    margin: 10px;
+}
+
+header figure {
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+    
+    box-sizing: border-box;
+    position: relative;
+}
+
+header figure img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+color: #ffffff;
+}
+
+main {
+    padding: 5vw;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contributor_header {
+    border-bottom: solid white 1px;
+}

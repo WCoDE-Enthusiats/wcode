@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WCoDE</title>
 
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <header>
-      <figure><img src="images/icon.png" alt="WCoDE icon"></figure>
+      <figure><img src="../images/icon.png" alt="WCoDE icon"></figure>
 
       <div id="header_buttons">
         <div class="text_button">Home</div>
@@ -20,150 +19,14 @@
     </header>
     
     <main>
-      <section id="title_section">
-        <div id="title_container">
-          <div id="figure_container">
-            <figure> <img src="images/welcome/alston.jpg" alt="alston"> </figure>
-            <figure> <img src="images/welcome/yapheth.jpg" alt="yapheth"> </figure>
-            <figure> <img src="images/welcome/adrian.jpg" alt="adrian"> </figure>
-          </div>
-
-          <div id="title_wrapper"></div>
-        </div>
-
-        <h1 id="title">WCoDE</h1>
-        <h2>The code of We</h2>
-        <h1 id="scroll_title">Scroll Down</h1>
-      </section>
-
-      <section id="gallery_section">
-        <div id="gallery_dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-
-        <div id="gallery_container">
-          <div id="gallery_wrapper" class="hide-scrollbar" style="
-              transform: translateY(25px);
-              opacity: 0;
-            ">
-            <figure>
-              <img src="images/welcome/project_website.png">
-
-              <figcaption>
-                <div class="project_description">
-                  <h2>The WCoDE Website</h2>
-                  <h3>Technologies used: Netlify, MongoDB</h3>
-                </div>
-
-                <div class="contributors text_button">Contributors -></div>
-              </figcaption>
-            </figure>
-
-            <figure>
-              <img src="images/welcome/project_website.png">
-
-              <figcaption>
-                <div class="project_description">
-                  <h2>The WCoDE Website</h2>
-                  <h3>Technologies used: Netlify, MongoDB</h3>
-                </div>
-
-                <div class="contributors text_button">Contributors -></div>
-              </figcaption>
-            </figure>
-            
-            <figure>
-              <img src="images/welcome/project_website.png">
-
-              <figcaption>
-                <div class="project_description">
-                  <h2>The WCoDE Website</h2>
-                  <h3>Technologies used: Netlify, MongoDB</h3>
-                </div>
-
-                <div class="contributors text_button">Contributors -></div>
-              </figcaption>
-            </figure>
-          </div>
-          
-          <div class="gallery_arrow"> </div>
-        </div>
-      </section>
-
-      <section id="language_section">
-        <div id="programming_container">
-          <div class="programming_square" id="python_square"><a href="#python_page"></a></div>
-          <div class="programming_square" id="cplusplus_square"><a href="#cplusplus_page"></a></div>
-          <div class="programming_square" id="javascript_square"><a href="#javascript_page"></a></div>
-        </div>
-
-        <div id="language_description_container">
-          <article id="python_page">
-            <h1>Python</h1>
-            <p>A powerful programming language that enables all kinds of creation from within a simplistic syntax. A great start for anyone who wants to dabble in programming.</p>
-            <blockquote>“Truly the language of brute force mathematics” - Tan</blockquote>
-            <blockquote>“simpler and easier than c++” - Matt</blockquote>
-          </article>
-          
-          <article id="cplusplus_page" style="opacity: 0;">
-            <h1>C++</h1>
-            <p>The world renown language C has gotten an upgrade with a robust set of libraries without comprising performance, gamers and developers alike rejoice.</p>
-            <blockquote>“Coalesces beauty and efficiency” - Nathaniel</blockquote>
-            <blockquote>“more complex and harder than Python” - Matt</blockquote>
-          </article>
-          
-          <article id="javascript _page" style="opacity: 0;">
-            <h1>JavaScript</h1>
-            <p>Every programmer says JavaScript sucks ass</p>
-            <blockquote>Well guess how this website was made fucker</blockquote>
-          </article>
-
-          <div id="language_scroll_wrapper"  class="hide-scrollbar">
-            <div style="width: 150vw;"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="stat_section">
-        <h3>Greenlit by <b>The Anton</b> himself, you can trust our professional advice to thrive in the digital age we now reside within</h3>
-
-        <div id="podium">
-          <div>
-            <h1>+10</h1>
-            <p>Members</p>
-          </div>
-          
-          <div>
-            <h1>1</h1>
-            <p>Projects</p>
-          </div>
-          
-          <div>
-            <h1>3</h1>
-            <p>Teachers</p>
-          </div>
-        </div>
-      </section>
+      <h1 id="contributor_header">PRESENTING OUR CONTRIBUTORS</h1>
+      <h1>Budiyoga Nurhalim</h1>
+      <h1>Velica Silvana Lazuardi</h1>
+      <h1>Selena Emerald Pratama</h1>
+      <h1>Micheal Keenan Sunjoyo</h1>
+      <h1>Grace Nathania Susanto</h1>
     </main>
 
-    <!-- <script type="module">
-      console.log("ready");
-
-      document.getElementById("fetch-btn").onclick = async () => {
-          console.log("fetching")
-
-          const response = await fetch('/.netlify/functions/login')
-            .then(response => response.json())
-
-            console.log(response)
-
-          document.getElementById('response-output').innerText = response.message;
-      }
-    </script> -->
-
     <script src="index.js"></script>
-    <script src="mouse_trail.js"></script>
   </body>
 </html>

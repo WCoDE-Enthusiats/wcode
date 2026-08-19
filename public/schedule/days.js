@@ -9,7 +9,7 @@ const days_in_month = (month) => month == 1 ? (is_leap_year ? 29 : 28) : (month 
 // yoga
 let date_array = [];
 const offset = 1 + day_of_week_at_date - date % 7;
-for (let i = 0; i < 35; i++) {
+for (let i = 0; i < 42; i++) {
     const rel_pos = i - offset;
 
     if (rel_pos < 0) {
@@ -22,6 +22,8 @@ for (let i = 0; i < 35; i++) {
 
     date_array[i] += 1; // ` ${rel_pos} < ${days_in_month(month)}`
 }
+
+console.log(date_array);
 
 date_array.forEach((date) => {
     const div = document.createElement('div');
