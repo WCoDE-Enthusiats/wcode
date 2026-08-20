@@ -10,6 +10,7 @@ The homepage of SMA Wardaya's coding club!
 - Michael
 - Grace
 - Velica
+- Oliver W
 
 ## Bleeding Edge Technologies Used
 - HTML
